@@ -1,0 +1,581 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+[{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<style>
+.test:not(.nohover):hover 
+{
+border: 1px solid #0814bf;
+}
+.logo {
+float: left;
+width: 260px;
+
+padding-top: 40px;
+}
+.logo img {
+	height:90px;
+}
+header.pb.sticky  {
+padding-top: 30px;
+}
+header.pb.sticky .logo {
+padding-top: 10px;
+}
+header.pb.sticky .logo img{
+max-height:100px;
+padding-bottom:20px;
+margin-bottom:50px;
+}
+
+.scrollTop {
+position:fixed;
+width:50px;
+height:50px;
+radius:2px;
+background-color:#81b343;
+opacity:60%;
+bottom:40px;
+right:50px
+text-decoration:none;
+text-align:center;
+line-height:50px;
+color:#fff;
+
+}
+.scrollTop:hover {
+color: #fff;
+}
+.scrollTop.show {
+opacity: 1;
+visibility: visible;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+.rev_slider{
+margin-right:140px;
+}
+	.progress-purple {
+		background-color: #cf98df;
+		border-color: #aa47b7;
+	}
+	.progress-purple .stat {
+		background-color: #9447b7;
+	}
+	.progress-purple .stat:before {
+		border-bottom-color: #aa47b7;
+	}
+	.progress-purple .progress-bar {
+		background-color: #b54db8;
+	}
+.srv_det ul li{
+	list-style-type: circle;
+	color:white;
+	font:16px Dosis;
+	margin-left:20px;
+}
+.srv_det h3{
+	font-size:32px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+
+<section >
+<div class="wrapper">
+
+	<header class="pb">
+		<div id="" class="container" >
+			<div class="header-data">
+				<div class="logo" ]>
+					<a href="#" title=""><img src="{% static "images/logo.png" %}" alt=""></a>
+				</div><!--logo end-->
+				<nav >
+					<ul >
+						<li>
+							<a href="{% url 'home' %}" title="" class="hm">
+								<i class="fa fa-home"></i>
+								<b>Home</b>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'about' %}" title="" class="hm">
+								<i class="fa fa-file-text-o"></i>
+								<b>About</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'workshop' %}" title="" class="hm">
+								<i class="fa fa-graduation-cap"></i>
+								<b>Workshop</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}" title="" class="hm">
+								<i class="far fa-file-image"></i>
+								<b>Gallery</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'contact' %}" title="" class="hm">
+								<i class="fa fa-phone" style="color:#81B747"></i>
+								<b>Contact</b>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="menu-btn" style="margin-top:80px">
+			                  <span class="bar1"></span>
+					          <span class="bar2"></span>
+					          <span class="bar3"></span>
+				        </div><!--nav end-->
+				</div>
+				<!--menu-btn end-->
+			</div><!--header-data end-->
+		</div>
+	<!--header end-->
+
+	<div class="responsive-mobile-menu">
+		<ul>
+			<li><a href="{% url 'home' %}" title="">Home</a>
+				
+			</li>
+			<li><a href="{% url 'about' %}" title="">About</a>
+				
+			</li>
+			<li><a href="{% url 'workshop' %}" title="">Workshop</a>
+				
+			</li>
+			<li><a href="{% url 'gallery' %}" title="">Gallery</a>
+				
+			</li>
+			
+			<li><a href="{% url 'contact' %}" title="">Contact</a></li>
+		</ul>
+	</div><!--responsive-mobile-menu end-->
+	</header>
+	</section>
+	<section>
+	<div class="hidden-lg" style="margin:0px;padding-top:180px;background-color:white">
+	</div>
+	</section>
+	
+		<section class="pager-sec" >
+			<div class="container" >
+				<div class="pager-pag" >
+					<h3>WORKSHOP CLASSES</h3>
+					<h4></h4>
+				</div><!--pager-pag end-->
+			</div>
+		</section><!--pager-sec end-->
+ 
+
+		<section class="block no-padding">
+			<div class="class-overview">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="overview-info">
+							<h3 class="title-hd">Air'o science</h3>
+							<div class="bld-text">
+	    						<p>We could never wonder about a world without air!Come!<br> Join us in this workshop to enlighten yourselves and know what all can 'air' do and understand the science behind the concepts of air.</p>
+	    					</div><!--bld-text end-->
+	    					<div class="feat-links">
+							<h3 class="title-hd" style="font-size:35px">Course benefits</h3>
+	    						<ul>
+	    							<li><i class="fa fa-check"></i> <span>1:6 Live and interactive secession for maximum care and attention</span></li>
+	    							<li><i class="fa fa-check"></i> <span>Open platform to exhibits interesting ideas of your young ones.</span></li>
+	    							<li><i class="fa fa-check"></i> <span>Learn science with real-life application.</span></li>
+	    							<li><i class="fa fa-check"></i> <span>DIY activities.</span></li>
+	    							<li><i class="fa fa-check"></i> <span>Resources and materials will be provided by Brainix.</span></li>
+	    						</ul>
+	    					</div>
+						</div><!--overview-info end-->
+					</div>
+					<div class="col-lg-6 pd-none">
+						<div class="class-overview-img">
+							<img src="{% static 'images/box sticker.jpg' %}" alt="" style="margin-top:10px">
+						</div><!--overview-img end-->
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+		<section class="block no-padding">
+			<div class="class-overview">
+				<div class="row">
+					<div class="col-lg-6 pd-none">
+						<div class="class-overview-img st2">
+							<img src="{% static 'images/airo_science.jpg' %}" alt="">
+						</div><!--overview-img end-->
+					</div>
+					<div class="col-lg-6">
+						<div class="overview-progress">
+							<h3 class="title-hd">Class details</h3>
+							<p style="font-size:20px;font-weight:bold;color:black">8 Sessions Certified online live Course.<p>
+							<div class="progress">
+							    <div class="progress-bar p1 progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+							      Pricing 
+								  <span class="stat">Rs.1999 </span>
+							    </div>
+						  	</div><!--progress end-->
+						  <!--progress end-->
+						  	<div class="progress progress-blue">
+							    <div class="progress-bar p3 progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+							      Class 
+								  <span class="stat">ratio 1:6</span>
+							    </div>
+						  	</div>
+							  <div class="progress progress-purple"  >
+							    <div class="progress-bar p4 progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+							      Age Group
+								  <span class="stat">7 to 10</span>
+							    </div>
+						  	</div><!--progress end-->
+								<div class="progress progress-green">
+							    <div class="progress-bar p2 progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+							      Duration
+								  <span class="stat">45 min/week</span>
+							    </div>
+						  	</div>
+						</div><!--overview-progress end-->
+					</div>
+				</div>
+			</div><!--class-overview end-->
+		</section>
+
+
+
+		<section class="block5">
+			<div class="fixed-bg bg-light"></div>
+			<div class="container">
+				<div class="fancyboxes-item st2 cp">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span><i class="fa fa-heart"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Rudimentary Learning</h3>
+									<p>Intend to build a stable fundamental education in kids.</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span class="scnd"><i class="fa fa-check-circle-o"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Hands-on Activities</h3>
+									<p>Practical learning to enhance visualization of concepts.</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span class="thrd"><i class="fa fa-thumbs-o-up"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Creative and logical thinking</h3>
+									<p>Influence thought process with futuristic ideas.</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span class="frth"><i class="fa fa-child"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Innovation centre</h3>
+									<p>Drives new thoughts and solutions for problems of tomorrow.</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span class="fifth"><i class="fa fa-book"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Design improvement</h3>
+									<p>Support to strengthen your futuristic innovative ideas.</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+							<div class="facnybox-info">
+								<div class="fancy-hd">
+									<span class="sixth"><i class="fa fa-signal"></i></span>
+								</div><!--fancy-hd end-->
+								<div class="facny-dt">
+									<h3>Transfer of learning </h3>
+									<p>Use of previously acquired knowledge and skill in a problem-solving situation</p>
+								</div>
+							</div><!--facnybox-info end-->
+						</div>
+					</div>
+				</div><!--fancyboxes end-->
+			</div>
+		</section>
+         <section class="pager-sec">
+			<div class="container">
+				<div class="pager-pag">
+					<h3 class="no-mg">Class overview</h3>
+				</div><!--pager-pag end-->
+			</div>
+		</section><!--pager-sec end-->
+
+
+
+		<section class="block5">
+			<div class="container">
+				<div class="more-services st2">
+	    			<div class="row">
+	    				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/BLANKET1.jpg' %}" alt="" style="height:201px">
+	    									<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det">
+	    									<h3>1.Earth's blanket</h3>
+											<ul>
+	    				                        <li> All about Earth's atmosphere.</li>
+                                                <li>Where does the air come from?-Story of air.</li>
+                                                <li>Life inside air.</li>
+												<li style="color:#6f4793">Understanding the properties of air.</li>
+												
+											</ul>
+											</ul>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/MIGHTY AIR2.jpg' %}" alt="" style="height:201px">
+	    									<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det clrr2">
+	    									<h3 >2. All about mighty air</h3>
+											<ul>
+	    									    <li>Understanding the properties of air.</li>
+                                                <li>Innovate a DIY toy using air.</li>
+											    <li>Explore the usage of air in our daily activities.</li>
+											 </ul>
+                                           </p>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/heavy hero3.jpg' %}" alt="" style="height:201px">
+	    									<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det clrr3">
+	    									<h3>3. Heavy hero</h3>
+											<ul>
+	    									    <li>Understanding Air pressure.</li>
+                                                <li>Science of wind.</li>
+                                                <li>DIY barometer modelling</li>
+												<li style="color:#ec8d6c">Explore the usage of air in our daily activities.<br>Explore the usage of air in </li>
+												
+											</ul>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/warehouse4.jpg' %}" alt="" style="height:201px">
+	    								<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det clrr4">
+	    									<h3>4. Energy warehouse</h3>
+											<ul>
+	    									    <li>Understanding compressed air.</li>
+                                                <li>Air as an alternative fuel.</li>
+                                                <li>DIY Air-boat modelling</li>
+												<li style="color:#86ba4e">Explore the usage of air in our daily activities.<br>Explore the usage of air in </li>
+												
+	    									</ul>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div><!--more-services end-->
+			</div>
+		</section>
+
+		
+		<footer>
+	    	<div class="container">
+	    		<div class="footer-data">
+	    			<div class="row">
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-about">
+	    						<h3 class="widget-title">About Us</h3>
+	    						<p>We are an edutech company creating exciting products which enables kids to learn science concepts in an interesting way. Our products not only keep kids engaged but will also enable them to explore and create their own applications..</p>
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Address</h3>
+	    						<ul>
+	    							<li><a href="#" title="">Cultiv8 Coworks,</a></li>
+	    							<li><a href="#" title="">Ganapathy,</a></li>
+	    							<li><a href="#" title="">Coimbatore - 641006</a></li>
+	    							
+	    						</ul>
+	    					</div><!--widget-links end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-posts">
+	    						<h3 class="widget-title">Contact us</h3>
+	    						<div class="blg-posts">
+	    							<div class="blg-post">
+	    								<i class="fas fa-phone" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">+91 6380327813</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								
+	    								<i class="far fa-envelope-open" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">info@brainixedutech.com</a></h3>
+
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								<i class="fas fa-globe" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">www.brainixedutech.com</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    						</div><!--blg-posts end-->
+	    					</div><!--widget-posts end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Social media</h3>
+	    						<a href="https://www.facebook.com/brainixsolutions" class="fa fa-facebook"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+								<a href="https://twitter.com/BrainixS" class="fa fa-twitter"><i class="fab fa-twitter" style="color:white;"></i></a>
+								<a href="https://www.instagram.com/brainix_solutions/" class="fa fa-instagram"><i class="fab fa-instagram" style="color:white;"></i></a>
+								<a href="https://www.linkedin.com/in/brainix-solutions-6767551b3/" class="fa fa-linkedin"><i class="fab fa-linkedin-in" style="color:white;"></i></a>
+								<a href="https://www.youtube.com/channel/UCyODKPO2QWKFe76W421yl2Q" class="fa fa-youtube"><i class="fab fa-youtube" style="color:white;"></i></a>
+								
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				</div>
+	    			</div>
+	    		</div><!-- footer-data end-->
+	    	</div>
+	    </footer>
+
+	    <a class="scrollTop" href="#"><i class="fas fa-angle-double-up"></i></a>
+
+
+	</div><!--wrapper end-->
+	<script src="https://kit.fontawesome.com/5b40725004.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/map.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SCIENCE WORKSHOP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+.center{
+    margin-left:700px;
+}
+h1{
+    font-size:36px;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+body{
+/* background:url( "{% static 'images/bg6.jpg' %}" ) ;
+background-repeat: no-repeat;
+background-size: auto; */
+background: url( "{% static "images/bg6.jpg" %}" ) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+padding: 0 10px;
+}
+.wrapper{
+max-width: 500px;
+width: 100%;
+background: #fff;
+margin: 20px auto;
+box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+padding: 30px;
+}
+
+.wrapper .title{
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 25px;
+color: #81b747;
+text-transform: uppercase;
+text-align: center;
+}
+
+.wrapper .form{
+width: 100%;
+}
+
+.wrapper .form .inputfield{
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+}
+
+.wrapper .form .inputfield label{
+ width: 200px;
+ color: #757575;
+ margin-right: 10px;
+font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+width: 100%;
+outline: none;
+border: 1px solid #d5dbd9;
+font-size: 15px;
+padding: 8px 10px;
+border-radius: 3px;
+transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+width: 100%;
+height: 125px;
+resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+position: relative;
+width: 100%;
+height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+content: "";
+position: absolute;
+top: 12px;
+right: 10px;
+border: 8px solid;
+border-color: #d5dbd9 transparent transparent transparent;
+pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+-webkit-appearance: none;
+-moz-appearance:   none;
+appearance:        none;
+outline: none;
+width: 100%;
+height: 100%;
+border: 0px;
+padding: 8px 10px;
+font-size: 15px;
+border: 1px solid #d5dbd9;
+border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+border: 1px solid #81b747;
+}
+
+.wrapper .form .inputfield p{
+ font-size: 14px;
+ color: #757575;
+}
+.wrapper .form .inputfield .check{
+width: 15px;
+height: 15px;
+position: relative;
+display: block;
+cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+width: 15px;
+height: 15px;
+border: 1px solid #81b747;
+display: block;
+position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+content: "";
+position: absolute;
+top: 1px;
+left: 2px;
+width: 5px;
+height: 2px;
+border: 2px solid;
+border-color: transparent transparent #fff #fff;
+transform: rotate(-45deg);
+display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+background: #81b747;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+display: block;
+}
+
+.wrapper .form .inputfield .btn{
+width: 100%;
+ padding: 8px 10px;
+font-size: 15px; 
+border: 0px;
+background:  #81b747;
+color: #fff;
+cursor: pointer;
+border-radius: 3px;
+outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+background: #81b747;
+}
+
+.wrapper .form .inputfield:last-child{
+margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+.wrapper .form .inputfield{
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wrapper .form .inputfield label{
+  margin-bottom: 5px;
+}
+.wrapper .form .inputfield.terms{
+  flex-direction: row;
+}
+}
+
+.logo {
+  
+}
+.logo img {
+       height:80px;
+       width:280px;
+       margin-top:25px;
+       margin-left:42%;
+       
+       algn:center;
+}
+
+</style>
+
+<body>
+<section >
+<div class="center">	
+
+   <section>
+     <div class="logo">
+						<a href="#" title=""><img src="{% static "images/logo.png" %}" alt=""></a>
+			</div>
+  </section>
+  
+<section>
+<div class="wrapper" >
+  
+    <div class="title" >
+    <H1 style="font-family:Amatic SC;" >Online Science Workshop Registration</H1>
+    </div>
+    <section >
+   
+    <div class="col-lg-12">
+								<div class="order-details">
+									<h3 class="ck-title">Your order</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+                                              
+												<td>{{ checkout_details.fname}}</td>
+                                               
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Parent name</th>
+                                                
+												<td>{{ checkout_details.pname}}</td>
+                                                
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th>Address</th>
+                                               
+												<td>{{checkout_details.address}}</td>
+                                               
+											</tr>
+											<tr>
+												<th>Email</th>
+                                               
+												<td>{{ checkout_details.email}}</td>
+                                               
+											</tr>
+                                            <tr>
+												<th>Phone</th>
+                                               
+												<td>{{ checkout_details.phno}}</td>
+                                              
+											</tr>
+											    <tr>
+												<th>Total</th>
+                                               
+												<td>Rs.1999</td>
+                                              
+											</tr>
+										</tfoot>
+									</table>
+									
+								</div><!--order-details end-->
+							</div>
+							<div class="gap-between">
+							     <p style="color:white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							</div><!--<div class="col-lg-12">
+							<div class="submit-bl">
+									<button type="submit" id="rzp-button1" method="post" class="form-btn2">Place Order</button>
+							</div>-->	
+<div class="raz-button" style="margin-left:150px;max-height=30px">							
+	 <form action="" method="POST" >
+    {% csrf_token %}<!--submit-bl end-->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"                 
+    data-key="rzp_live_Xc3fyKMq1KOaQi" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys
+    data-amount="199900" // Amount is in currency subunits. Hence, 29935 refers to 29935 paise or ₹299.35.
+    data-currency="INR"// You can accept international payments by changing the currency code. Contact our Support Team to enable International for your account
+    data-order_id="{{payment.id}}"// Replace with the order_id generated by you in the backend.
+    data-buttontext="Pay with Razorpay"
+    data-name="Brainix Solutions"
+    data-description="Science workshop"
+    data-image="{% static 'images/Final_logo.png' %}"
+    data-prefill.name="Your name"
+    data-prefill.email="Your email"
+    data-theme.color="#2193b0 → #6dd5ed"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
+</div>
+</section>   
+</div>
+<script src="https://kit.fontawesome.com/5b40725004.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.initialize.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 

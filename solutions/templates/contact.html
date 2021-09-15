@@ -1,0 +1,384 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+</head>
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<style>
+.container{
+	margin-top:0;
+}
+.test:not(.nohover):hover 
+{
+border: 1px solid #0814bf;
+}
+.logo {
+float: left;
+width: 260px;
+
+padding-top: 40px;
+}
+.logo img {
+	height:90px;
+}
+header.pb.sticky  {
+padding-top: 30px;
+}
+header.pb.sticky .logo {
+padding-top: 10px;
+}
+header.pb.sticky .logo img{
+max-height:60px;
+padding-bottom:20px;
+}
+
+.scrollTop {
+position:fixed;
+width:50px;
+height:50px;
+radius:2px;
+background-color:#81b343;
+opacity:60%;
+bottom:40px;
+right:50px
+text-decoration:none;
+text-align:center;
+line-height:50px;
+color:#fff;
+
+}
+.scrollTop:hover {
+color: #fff;
+}
+.scrollTop.show {
+opacity: 1;
+visibility: visible;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+.rev_slider{
+margin-right:140px;
+}
+@media (max-width: 991px) {
+	.block6{
+	     margin-top:180px;
+		 background-color:#fff;
+		 
+	}
+	
+    .logo img {
+       height:90px;
+	  
+}
+}
+</style>
+
+<body>
+
+<section >
+<div class="wrapper">
+
+	<header class="pb">
+		<div id="" class="container" >
+			<div class="header-data">
+				<div class="logo" ]>
+					<a href="#" title=""><img src="{% static "images/logo.png" %}" alt=""></a>
+				</div><!--logo end-->
+				<nav >
+					<ul >
+						<li>
+							<a href="{% url 'home' %}" title="" class="hm">
+								<i class="fa fa-home"></i>
+								<b>Home</b>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'about' %}" title="" class="hm">
+								<i class="fa fa-file-text-o"></i>
+								<b>About</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'workshop' %}" title="" class="hm">
+								<i class="fa fa-graduation-cap"></i>
+								<b>Workshop</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}" title="" class="hm">
+								<i class="far fa-file-image"></i>
+								<b>Gallery</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'contact' %}" title="" class="hm">
+								<i class="fa fa-phone" style="color:#81B747"></i>
+								<b>Contact</b>
+							</a>
+						</li>
+						<li>
+						
+						</li>
+					</ul>
+				</nav>
+				<div class="menu-btn" style="margin-top:80px">
+			                  <span class="bar1"></span>
+					          <span class="bar2"></span>
+					          <span class="bar3"></span>
+				</div><!--nav end-->
+				</div>
+				
+				<!--menu-btn end-->
+			</div><!--header-data end-->
+		</div>
+	<!--header end-->
+
+	<div class="responsive-mobile-menu">
+		<ul>
+			<li><a href="{% url 'home' %}" title="">Home</a>
+				
+			</li>
+			<li><a href="{% url 'about' %}" title="">About</a>
+				
+			</li>
+			<li><a href="{% url 'workshop' %}" title="">Workshop</a>
+				
+			</li>
+			<li><a href="{% url 'gallery' %}" title="">Gallery</a>
+				
+			</li>
+			
+			<li><a href="{% url 'contact' %}" title="">Contact</a></li>
+		</ul>
+	</div><!--responsive-mobile-menu end-->
+	</header>
+	</section>
+	<section>
+	<div class="hidden-lg" style="margin:0px;padding-top:180px;background-color:white">
+	</div>
+	</section>
+		<section class="pager-sec" > 
+			<div class="container">
+				<div class="pager-pag">
+					<h3>CONTACT US</h3>
+					
+				</div><!--pager-pag end-->
+			</div>
+		</section><!--pager-sec end-->
+
+
+		<section>
+			<div class="block no-padding">
+				<div id="map" >
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.9189781428777!2d76.9753606153351!3d11.044701357203287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859ed79f67a41%3A0x36d85d11fe2ed5df!2sCultiv8%20Coworks%20-%20Technology%20Business%20Incubator%20for%20startups!5e0!3m2!1sen!2sin!4v1628916238325!5m2!1sen!2sin" width="2500" height="450"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</section>
+
+       
+		<section class="block6 no-padding" >
+>
+			<div class="fixed-bg bg8" >
+			
+			</div>
+			<div class="container">
+				<div class="contact-info-pg">
+					<div class="row">
+						<div class="col-lg-6"></div>
+						<div class="col-lg-6">
+							<div class="our-address-info">
+								<h3 class="title-hd">Brainix Solutions</h3>
+								<ul>
+									<li>
+										<span><i class="fa fa-home"></i></span>
+										<p>
+											Cultiv8 Coworks,Ganapathy,Coimbatore - 641006</p>
+									</li>
+									<li>
+										<span><i class="fa fa-phone"></i></span>
+										<p>+91 6380327813</p>
+									</li>
+									<li>
+										<span><i class="fa fa-envelope"></i></span>
+										<p>info@brainixedutech.com</p>
+									</li>
+									<li>
+										<span><i class="fa fa-globe"></i></span>
+										<p>www.brainixedutech.com</p>
+									</li>
+								</ul>
+							</div><!--our-address-info end-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="block3">
+			<div class="fixed-bg bg9"></div>
+			<div class="container">
+				<div class="enquiry-sec">
+					<div class="heading clr">
+						<h3>Send Us Your Enquiry</h3>
+						<p>Have any queries about us or any doubts in science, feel free to reach us, We are eager enough to help you. </p>
+					</div><!--heading end-->
+					<div class="contact_sec">
+						<form method="POST" action="">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="input-field">
+										<input type="text" id="name" name="name" placeholder="Name">
+									</div><!--input-field end-->
+									<div class="input-field">
+										<input type="text" id="email" name="email" placeholder="Email">
+									</div><!--input-field end-->
+									<div class="input-field">
+										<input type="text" id="subject" name="subject" placeholder="Subject">
+									</div><!--input-field end-->
+								</div>
+								<div class="col-lg-6">
+									<div class="input-field">
+										<textarea id="message" name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="btn-submit">
+										<button id="submit" type="submit">SUBMIT</button>
+									</div><!--btn-submit end-->
+								</div>
+							</div>
+						</form>
+					</div><!--contact_sec end-->
+				</div><!--enquiry-sec end-->
+			</div>
+		</section>
+
+		<footer>
+	    	<div class="container">
+	    		<div class="footer-data">
+	    			<div class="row">
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-about">
+	    						<h3 class="widget-title">About Us</h3>
+	    						<p>We are an edutech company creating exciting products which enables kids to learn science concepts in an interesting way. Our products not only keep kids engaged but will also enable them to explore and create their own applications..</p>
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Address</h3>
+	    						<ul>
+	    							<li><a href="#" title="">Cultiv8 Coworks,</a></li>
+	    							<li><a href="#" title="">Ganapathy,</a></li>
+	    							<li><a href="#" title="">Coimbatore - 641006</a></li>
+	    							
+	    						</ul>
+	    					</div><!--widget-links end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-posts">
+	    						<h3 class="widget-title">Contact us</h3>
+	    						<div class="blg-posts">
+	    							<div class="blg-post">
+	    								<i class="fas fa-phone" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">+91 6380327813</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								
+	    								<i class="far fa-envelope-open" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">info@brainixedutech.com</a></h3>
+
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								<i class="fas fa-globe" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">www.brainixedutech.com</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    						</div><!--blg-posts end-->
+	    					</div><!--widget-posts end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Social media</h3>
+	    						<a href="https://www.facebook.com/brainixsolutions" class="fa fa-facebook"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+								<a href="https://twitter.com/BrainixS" class="fa fa-twitter"><i class="fab fa-twitter" style="color:white;"></i></a>
+								<a href="https://www.instagram.com/brainix_solutions/" class="fa fa-instagram"><i class="fab fa-instagram" style="color:white;"></i></a>
+								<a href="https://www.linkedin.com/in/brainix-solutions-6767551b3/" class="fa fa-linkedin"><i class="fab fa-linkedin-in" style="color:white;"></i></a>
+								<a href="https://www.youtube.com/channel/UCyODKPO2QWKFe76W421yl2Q" class="fa fa-youtube"><i class="fab fa-youtube" style="color:white;"></i></a>
+								
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				</div>
+	    			</div>
+	    		</div><!-- footer-data end-->
+	    	</div>
+	    </footer>
+	    <a class="scrollTop" href="#"><i class="fas fa-angle-double-up"></i></a>
+
+	</div><!--wrapper end-->
+
+	<script src="https://kit.fontawesome.com/5b40725004.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/map.js' %}"></script>
+<script type="text/javascript" src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.9189781428777!2d76.9753606153351!3d11.044701357203287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859ed79f67a41%3A0x36d85d11fe2ed5df!2sCultiv8%20Coworks%20-%20Technology%20Business%20Incubator%20for%20startups!5e0!3m2!1sen!2sin!4v1628916238325!5m2!1sen!2sin"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

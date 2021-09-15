@@ -1,0 +1,591 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<style>
+
+     .test:not(.nohover):hover {
+	border: 1px solid #0814bf;
+	}
+	.logo {
+	float: left;
+	width: 260px;
+	
+	padding-top: 40px;
+}
+.logo img {
+       height:90px;
+}
+header.pb.sticky  {
+	padding-top: 30px;
+}
+header.pb.sticky .logo {
+	padding-top: 10px;
+}
+header.pb.sticky .logo img{
+	max-height:100px;
+	padding-bottom:20px;
+}
+
+.scrollTop {
+	position:fixed;
+	width:50px;
+	height:50px;
+	radius:2px;
+	background-color:#81b343;
+	opacity:60%;
+	bottom:40px;
+	right:50px
+	text-decoration:none;
+	text-align:center;
+	line-height:50px;
+	color:#fff;
+	
+}
+.scrollTop:hover {
+	color: #fff;
+}
+.scrollTop.show {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+.wrapper1 .items .btn btn-default btn-green{
+    color:#fff;
+    font: 18px Dosis;
+}
+.wrapper1 nav{
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+}
+.wrapper1 .items{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  padding-bottom:90px;
+  margin-right:300px;
+  
+}
+.items span{
+  padding: 7px 10px;
+  font-family:Dosis;
+  font-color:#fff;
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align:center;
+  border-radius: 10px;
+  border: 2px solid #1a9eb9;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+
+}
+.items span.active,
+.items span:hover{
+  color: #fff;
+  background: #007bff;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 7px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+.button-types {
+	float: left;
+	width: 100%;
+	margin-bottom: -40px;
+}
+.btn {
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 16px 50px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	border: 2px solid #1a9eb9;
+	background-image: url(../images/bg-vector2.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: repeat;
+	margin-bottom: 40px;
+}
+.btn:hover {
+	background-color: #ffde0a;
+	border-color: #f0ba00;
+	color: #fff;
+}
+.btn-default {
+	background-color: #eb8866;
+    border-color:#c15935;
+}
+.btn-blue {
+	background-color: #3bbcd6;
+}
+.btn-green {
+	background-color: #81b748;
+	border-color: #5a8d23;
+}
+.btn-crimson {
+	background-color: #d24c8c;
+	border-color: #b63371;
+}
+.options {
+		float: left;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.options ul li {
+		display: inline-block;
+	}
+	.options ul li a {
+		color: #fff;
+		font: Dosis;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 38px;
+		padding: 0 16px;
+		display: inline-block;
+		margin-right: 5px;
+		cursor: pointer;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		border:1px solid #e5e5e5;
+		font-family: 'Open Sans';
+	}
+	.options ul li a .selected {
+		-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+		-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+		-ms-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+		-o-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+		box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+		color: #333;
+	}
+
+  </style>
+<body>
+
+	<div class="wrapper">
+
+		<header class="pb">
+			<div class="container" >
+				<div class="header-data">
+					<div class="logo">
+						<a href="#" title=""><img src="{% static "images/logo.png" %}" alt="" ></a>
+					</div><!--logo end-->
+					
+					<nav >
+						<ul >
+							<li>
+								<a href="{% url 'home' %}" title="" class="hm">
+									<i class="fa fa-home"></i>
+									<b>Home</b>
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'about' %}" title="" class="hm">
+									<i class="fa fa-file-text-o"></i>
+									<b>About</b>
+								</a>
+								
+							</li>
+							<li>
+								<a href="{% url 'workshop' %}" title="" class="hm">
+									<i class="fa fa-graduation-cap"></i>
+									<b>Workshop</b>
+								</a>
+								
+							</li>
+							<li>
+								<a href="{% url 'gallery' %}" title="" class="hm">
+									<i class="far fa-file-image"></i>
+									<b>Gallery</b>
+								</a>
+								
+							</li>
+                            <li>
+								<a href="{% url 'contact' %}" title="" class="hm">
+									<i class="fa fa-phone" style="color:#81B747"></i>
+									<b>Contact</b>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="menu-btn" style="margin-top:80px">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					</div><!--nav end-->
+					</div>
+					<!--menu-btn end-->
+				</div><!--header-data end-->
+			</div>
+		</header><!--header end-->
+
+		<div class="responsive-mobile-menu">
+			<ul>
+				<li><a href="{% url 'home' %}" title="">Home</a>
+					
+				</li>
+				<li><a href="{% url 'about' %}" title="">About</a>
+					
+				</li>
+				<li><a href="{% url 'workshop' %}" title="">Workshop</a>
+					
+				</li>
+				<li><a href="{% url 'gallery' %}" title="">Gallery</a>
+					
+				</li>
+				
+				<li><a href="{% url 'contact' %}" title="">Contact</a></li>
+			</ul>
+		</div><!--responsive-mobile-menu end-->
+         
+	    <section>
+		<div class="hidden-lg" style="margin:0px;padding-top:180px;background-color:white">
+		</div>
+		</section>
+		 <section class="pager-sec">
+	
+			<div class="container">
+				<div class="pager-pag">
+					<h3>Gallery</h3>
+					
+				</div><!--pager-pag end-->
+			</div>
+           </div>
+           </section>
+	<section>
+          <section class="block7">
+			<section class="options">
+				<div class="option-isotop">
+					<ul id="filter" class="option-set filters-nav" data-option-key="filter">
+						<li><a class="selected itemm btn btn-default btn-blue" data-name="all">All</a></li>
+						<li><a class="itemm btn btn-default btn-green" data-name="S-W" style="font:18px Dosis #fff">workshop</a></li>
+						<li><a class="itemm btn btn-default btn-crimson" data-name="Y-I">innovators</a></li>
+						<li><a class="itemm btn btn-default " data-name="Y-E">entrepreneur</a></li>
+						<li><a class="itemm btn btn-default btn-green" data-name="B-E">events</a></li>
+					</ul>
+				</div>
+			<!-- FILTER BUTTONS -->
+    <!-- filter Images -->
+    <div class="gallery">
+      <div class="image" data-name="S-W"><span><img src="{% static 'images/w1.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="Y-I"><span><img src="{% static 'images/w2.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="Y-E"><span><img src="{% static 'images/w3.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="B-E"><span><img src="{% static 'images/w4.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="Y-I"><span><img src="{% static 'images/w5.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="Y-E"><span><img src="{% static 'images/w6.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="B-E"><span><img src="{% static 'images/w7.jpeg' %}" alt=""></span></div>
+      <div class="image" data-name="Y-I"><span><img src="{% static 'images/w9.jpg' %}" alt=""></span></div>
+    </div>
+  </div>  
+        
+</section> 
+        <footer>
+	    	<div class="container">
+	    		<div class="footer-data">
+	    			<div class="row">
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-about">
+	    						<h3 class="widget-title">About Us</h3>
+	    						<p>We are an edutech company creating exciting products which enables kids to learn science concepts in an interesting way. Our products not only keep kids engaged but will also enable them to explore and create their own applications..</p>
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Address</h3>
+	    						<ul>
+	    							<li><a href="#" title="">Cultiv8 Coworks,</a></li>
+	    							<li><a href="#" title="">Ganapathy,</a></li>
+	    							<li><a href="#" title="">Coimbatore - 641006</a></li>
+	    							
+	    						</ul>
+	    					</div><!--widget-links end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-posts">
+	    						<h3 class="widget-title">Contact us</h3>
+	    						<div class="blg-posts">
+	    							<div class="blg-post">
+	    								<i class="fas fa-phone" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">+91 6380327813</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								
+	    								<i class="far fa-envelope-open" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">info@brainixedutech.com</a></h3>
+
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								<i class="fas fa-globe" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">www.brainixedutech.com</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    						</div><!--blg-posts end-->
+	    					</div><!--widget-posts end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Social media</h3>
+	    						<a href="https://www.facebook.com/brainixsolutions" class="fa fa-facebook"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+								<a href="https://twitter.com/BrainixS" class="fa fa-twitter"><i class="fab fa-twitter" style="color:white;"></i></a>
+								<a href="https://www.instagram.com/brainix_solutions/" class="fa fa-instagram"><i class="fab fa-instagram" style="color:white;"></i></a>
+								<a href="https://www.linkedin.com/in/brainix-solutions-6767551b3/" class="fa fa-linkedin"><i class="fab fa-linkedin-in" style="color:white;"></i></a>
+								<a href="https://www.youtube.com/channel/UCyODKPO2QWKFe76W421yl2Q" class="fa fa-youtube"><i class="fab fa-youtube" style="color:white;"></i></a>
+								
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				</div>
+	    			</div>
+	    		</div><!-- footer-data end-->
+	    	</div>
+	    </footer>
+
+	    <a class="scrollTop" href="#"><i class="fas fa-angle-double-up"></i></a>
+	</div><!--wrapper end-->
+<script>
+//selecting all required elements
+const filterItem = document.querySelector(".options");
+const filterImg = document.querySelectorAll(".gallery .image");
+
+window.onload = ()=>{ //after window loaded
+  filterItem.onclick = (selectedItem)=>{ //if user click on filterItem div
+    if(selectedItem.target.classList.contains("itemm")){ //if user selected item has .item class
+      filterItem.querySelector(".selected").classList.remove("active"); //remove the active class which is in first item
+      selectedItem.target.classList.add("active"); //add that active class on user selected item
+      let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
+      filterImg.forEach((image) => {
+        let filterImges = image.getAttribute("data-name"); //getting image data-name value
+        //if user selected item data-name value is equal to images data-name value
+        //or user selected item data-name value is equal to "all"
+        if((filterImges == filterName) || (filterName == "all")){
+          image.classList.remove("hide"); //first remove the hide class from the image
+          image.classList.add("show"); //add show class in image
+        }else{
+          image.classList.add("hide"); //add hide class in image
+          image.classList.remove("show"); //remove show class from the image
+        }
+      });
+    }
+  }
+  for (let i = 0; i < filterImg.length; i++) {
+    filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+  }
+}
+
+//fullscreen image preview function
+//selecting all required elements
+const previewBox = document.querySelector(".preview-box"),
+categoryName = previewBox.querySelector(".title p"),
+previewImg = previewBox.querySelector("img"),
+closeIcon = previewBox.querySelector(".icon"),
+shadow = document.querySelector(".shadow");
+
+function preview(element){
+  //once user click on any image then remove the scroll bar of the body, so user cant scroll up or down
+  document.querySelector("body").style.overflow = "hidden";
+  let selectedPrevImg = element.querySelector("img").src; //getting user clicked image source link and stored in a variable
+  let selectedImgCategory = element.getAttribute("data-name"); //getting user clicked image data-name value
+  previewImg.src = selectedPrevImg; //passing the user clicked image source in preview image source
+  categoryName.textContent = selectedImgCategory; //passing user clicked data-name value in category name
+  previewBox.classList.add("show"); //show the preview image box
+  shadow.classList.add("show"); //show the light grey background
+  closeIcon.onclick = ()=>{ //if user click on close icon of preview box
+    previewBox.classList.remove("show"); //hide the preview box
+    shadow.classList.remove("show"); //hide the light grey background
+    document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
+  }
+}</script>
+
+	<script src="https://kit.fontawesome.com/5b40725004.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.initialize.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 

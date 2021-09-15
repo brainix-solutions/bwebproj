@@ -1,0 +1,1 @@
+web: gunicorn brainix1.wsgi --log-file -

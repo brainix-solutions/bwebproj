@@ -1,0 +1,640 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Brainix Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome-font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<style>
+.test:not(.nohover):hover 
+{
+border: 1px solid #0814bf;
+}
+.logo {
+float: left;
+width: 260px;
+
+padding-top: 40px;
+}
+.logo img {
+	height:90px;
+}
+header.pb.sticky  {
+padding-top: 30px;
+}
+header.pb.sticky .logo {
+padding-top: 10px;
+}
+header.pb.sticky .logo img{
+max-height:100px;
+padding-bottom:20px;
+margin-bottom:50px;
+}
+
+.scrollTop {
+position:fixed;
+width:50px;
+height:50px;
+radius:2px;
+background-color:#81b343;
+opacity:60%;
+bottom:40px;
+right:50px
+text-decoration:none;
+text-align:center;
+line-height:50px;
+color:#fff;
+
+}
+.scrollTop:hover {
+color: #fff;
+}
+.scrollTop.show {
+opacity: 1;
+visibility: visible;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+.rev_slider{
+margin-right:140px;
+}
+</style>
+
+<body>
+
+<section >
+<div class="wrapper">
+
+	<header class="pb">
+		<div id="" class="container" >
+			<div class="header-data">
+				<div class="logo" >
+					<a href="#" title=""><img src="{% static "images/logo.png" %}" alt=""></a>
+				</div><!--logo end-->
+				<nav >
+					<ul >
+						<li>
+							<a href="{% url 'home' %}" title="" class="hm">
+								<i class="fa fa-home"></i>
+								<b>Home</b>
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'about' %}" title="" class="hm">
+								<i class="fa fa-file-text-o"></i>
+								<b>About</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'workshop' %}" title="" class="hm">
+								<i class="fa fa-graduation-cap"></i>
+								<b>Workshop</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}" title="" class="hm">
+								<i class="far fa-file-image"></i>
+								<b>Gallery</b>
+							</a>
+							
+						</li>
+						<li>
+							<a href="{% url 'contact' %}" title="" class="hm">
+								<i class="fa fa-phone" style="color:#81B747"></i>
+								<b>Contact</b>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="menu-btn" style="margin-top:80px">
+			                  <span class="bar1"></span>
+					          <span class="bar2"></span>
+					          <span class="bar3"></span>
+				        </div><!--nav end-->
+				</div>
+				<!--menu-btn end-->
+			</div><!--header-data end-->
+		</div>
+	<!--header end-->
+
+	<div class="responsive-mobile-menu">
+		<ul>
+			<li><a href="{% url 'home' %}" title="">Home</a>
+				
+			</li>
+			<li><a href="{% url 'about' %}" title="">About</a>
+				
+			</li>
+			<li><a href="{% url 'workshop' %}" title="">Workshop</a>
+				
+			</li>
+			<li><a href="{% url 'gallery' %}" title="">Gallery</a>
+				
+			</li>
+			
+			<li><a href="{% url 'contact' %}" title="">Contact</a></li>
+		</ul>
+	</div><!--responsive-mobile-menu end-->
+	</header>
+	</section>
+	<section>
+	<div class="hidden-lg" style="margin:0px;padding-top:180px;background-color:white">
+	</div>
+	</section>]
+ 		<section class="main-slider">
+            <div id="rev_slider_476_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="christmas-snow-scene" data-source="gallery">
+            <!-- START REVOLUTION SLIDER 5.3.0.2 fullscreen mode -->
+                <div id="rev_slider_476_1" class="rev_slider" data-version="5.3.0.2">
+                    <ul>    
+                        <!-- SLIDE  -->
+                        <li data-index="rs-1648" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/slider_banner.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'images/first3.jpg' %}"  alt=""  data-bgposition="center-left" data-marginbottom="80%" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgpaddingtop="40px" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <div class="tp-caption lyr10 tp-resizeme" 
+                                id="slide-1648-layer-1" 
+                                data-x="right" data-hoffset="-295" 
+                                data-y="top" data-voffset="160" 
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text" 
+                                data-responsive_offset="on" 
+                                data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'  
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                                data-start="500"
+                                data-splitin=""
+                                data-splitout="none"
+                                data-elementdelay="0.02"
+                                style=""><img src="{% static 'images/' %}" alt="">
+                            </div>
+                      
+                      
+                      
+
+                        </li>
+                    </ul>              
+							
+             </div><!--Revolution Slider end-->
+
+
+	    </div>
+		</section><!--main-slider end-->
+         
+		 <section class="pager-sec" style="margin-top:5%">
+	
+			<div class="container">
+				<div class="pager-pag">
+					<h3>Welcome to  <span>‘Brainix ’</span> </h3>
+					
+				</div><!--pager-pag end-->
+			</div>
+           </div>
+           </section>
+	    
+
+	    <section class="block bdr-bfr">
+	    	<div class="container">
+	    		<div class="our-services">
+	    			<div class="row">
+	    				<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+	    					<div class="service-details">
+	    						<div class="service-icon sbg1">
+	    							<i class="fa fa-paw"></i>
+	    						</div>
+	    						<div class="service-info">
+	    							<h3>Brainix Young Innovator's club</h3>
+	    							<p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna.</p>
+	    						</div>
+	    					</div><!--service-details end-->
+	    				</div>
+	    				<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+	    					<div class="service-details">
+	    						<div class="service-icon sbg2">
+	    							<i class="fa fa-paw"></i>
+	    						</div>
+	    						<div class="service-info">
+	    							<h3>Brainix Young Entrepreneur's club</h3>
+	    							<p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna.</p>
+	    						</div>
+	    					</div><!--service-details end-->
+	    				</div>
+	    				<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+	    					<div class="service-details">
+	    						<div class="service-icon sbg3">
+	    							<i class="fa fa-paw"></i>
+	    						</div>
+	    						<div class="service-info">
+	    							<h3>Brainix Science Workshop</h3>
+	    							<p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna.</p>
+	    						</div>
+	    					</div><!--service-details end-->	
+	    				</div>
+	    			</div>
+	    		</div><!--our-services-->
+	    	</div>
+	    </section>
+
+	    <section class="block7 remove-btm-gap" style="margin-top:10px">
+	    	<div class="container">
+	    		<div class="cms-about-us">
+	    			<div class="row">
+	    				<div class="col-lg-6">
+	    					<div class="cms-about-text pt-top">
+	    						<h3 class="title-hd">Why <span>Brainix</span>?</h3>
+	    						<p>Brainix commits to provide your elite young ones an open environment and push their limits of imagination beyond boundaries, trigger their creative mind and enable them to learn new concepts, explore possibilities of innovation, and discover a field of their interest.</p>
+	    						<p>Think Innovation, Think Brainix…!</p>
+	    						<a href="{% url 'about' %}" title="">More Info</a>
+	    					</div><!--cms-about-text end-->
+	    				</div>
+	    				<div class="col-lg-6">
+	    					<div class="cms-abt-img">
+	    						<img src="{% static 'images/why_brainix.jpg'%}" alt="" style="height:363px;width:567">
+	    					</div><!--cms-abt-img end-->
+	    				</div>
+	    			</div>
+	    		</div><!--about-us-sec end-->
+	    	</div>
+	    </section>
+
+
+	  
+
+
+
+
+	    <section class="block4">
+	    	<div class="container">
+	    		<div class="our-features-sec">
+	    			<div class="features-list-tab">
+	    				<ul class="nav nav-tabs" id="nav-tab" role="tablist">
+							<li>
+								<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Science workshop</a>
+							</li>
+						    <li>
+						      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Young Innovator's club</a>
+						  	</li>
+							<li>
+							   <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Young entrepreneur's club</a>
+							</li>
+							
+						</ul>
+	    			</div><!--features-list-tab end-->
+	    			<div class="feature-services">
+		    			<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="cws-inp-details">
+											<h3>Science Workshop</h3>
+											<p>Live workshops with a wide variety of interesting topics and engaging activities help your child easily understand the concepts of science. You can also see your child implementing those concepts in life with a happy smile on their face.
+The workshops that we organize will give you obvious results and if you want to see your child shining in the field of science with clarity in concepts, then we are the ones!</p>
+											
+											<a href="#" title="">More info</a>
+											<a href="{% url 'pay_form' %}">For free trial</a>
+										</div><!--cws-inp-details end-->
+									</div>
+									<div class="col-lg-4">
+										<div class="tb-img">
+											<img src="{% static 'images/workshop.jpg'%}" alt="" style="width:307px;height:323px">
+										</div><!--tb-img end-->
+									</div>
+								</div>
+							</div>
+						    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+						    	<div class="row">
+									<div class="col-lg-8">
+										<div class="cws-inp-details">
+											<h3>Young Innovator's club</h3>
+											<p>The club is a community of young minds with innovative ideas.  We at Brainix help them in developing their thinking skills with thought-provoking activities and with idea pitching workshops. 
+We also support inspiring ideas and help them develop their ideas and you can witness your child being a young scientist.</p>
+
+											<a href="{% url 'trial_form' %}">More info</a>
+											
+											<a href="https://chat.whatsapp.com/DOJWfF9utZ53MukGXzj0Rm" title="">Join</a>
+										</div><!--cws-inp-details end-->
+									</div>
+									<div class="col-lg-4">
+										<div class="tb-img">
+											<img src="{% static 'images/workshop.jpg'%}" alt="" style="width:307px;height:323px">
+										</div><!--tb-img end-->
+									</div>
+								</div>
+						    </div>
+						    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+						    	<div class="row">
+									<div class="col-lg-8">
+										<div class="cws-inp-details">
+											<h3>Young entrepreneur's club</h3>
+											<p>This is an association of kids with entrepreneurial ideas or we help them in developing their ideas to become an entrepreneur.
+We extend our full support in creating their products and bringing them to the market.</p>
+											
+											<a href="#" title="">More info</a>
+											
+										</div><!--cws-inp-details end-->
+									</div>
+									<div class="col-lg-4">
+										<div class="tb-img">
+											<img src="{% static 'images/entrepreneur.jpg'%}" alt="" style="width:307px;height:323px">
+										</div><!--tb-img end-->
+									</div>
+								</div>
+						    </div>
+						    <div class="tab-pane fade" id="dev" role="tabpanel" aria-labelledby="dev">
+						    	<div class="row">
+									
+								
+								</div>
+						    </div>
+						</div>
+					</div>
+	    		</div><!--our-features-sec end-->
+	    	</div>
+	    </section>
+
+        <section class="block2">
+	    	<div class="fixed-bg bg5"></div>
+	    	<div class="container">
+	    		<div class="heading clr">
+	    			<h3>Our Class</h3>
+	    		</div><!--heading end-->
+	    		<div class="cls-text">
+	    			<div class="row">
+	    				<div class="col-lg-6">
+	    					<div class="bld-text">
+	    						<p style="color:black">A team of vibrant educators is eagerly awaiting to enlighten the young minds, having a systemic idea of expanding young creative minds with fascinating topics and hypothetical questions with flashy presentations alongside ensuring interactive sessions. </p>
+	    					</div><!--bld-texte end-->
+	    				</div>
+	    				
+	    			</div>
+	    		</div><!--cls-texte end-->
+	    		<div class="more-services">
+	    			<div class="row">
+	    				<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/science.jpg' %}" alt="" style="height:254px">
+	    								<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det">
+	    									<h3>Science of Flight</h3>
+	    									<p>This workshop is a pack of science that deals with flying objects and how things fly. We assure you that this would be fascinating to the young masterminds.</p>
+	    									<a href="{% url 'trial_form' %}" title="">Register</a>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+	    					<div class="services_details">
+	    						<div class="row">
+	    							<div class="col-lg-6">
+	    								<div class="srvc-img">
+	    									<img src="{% static 'images/airoscience.jpg' %}" alt="" style="height:254px">
+	    									<!--specs-fig end-->
+	    								</div>
+	    							</div>
+	    							<div class="col-lg-6">
+	    								<div class="srv_det">
+	    									<h3>Air'o Science</h3>
+	    									<p>Come! Join us in this workshop to enlighten yourselves and know what all can 'air' do and understand the concepts of science in air.</p>
+	    									<a href="{% url 'pay_form' %}" title="">Register</a>
+	    								</div><!--srv_det end-->
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				
+
+	    </section>
+
+
+	    <section class="block5">
+	    	<div class="fixed-bg bg6 no-fix"></div>
+	    	<div class="container">
+	    		<div class="heading clr">
+	    			<h3>Your Children</h3>	
+	    		</div><!--heading end-->
+	    		<div class="childy-sec">
+	    			<div class="acord-sec">
+		    			<div class="row">
+		    				<div class="col-lg-6">
+		    					<div class="bld-text">
+		    						<p>Your child has an open young mind, awaiting to gain knowledge about the world of science. We, Brainix provide them with vast intelligence in simplified interpretations with an extensive quantity of concepts and intensive quality of teaching. </p>
+		    					</div><!--bld-texte end-->
+		    					<div class="feat-links">
+		    						<ul>
+		    							<li><i class="fa fa-check"></i> <span>We let the child “learn by doing” </span></li>
+		    							<li><i class="fa fa-check"></i> <span>We would like to get involved in your child’s future in science</span></li>
+		    							<li><i class="fa fa-check"></i> <span>We find solutions for their childish dilemmas</span></li>
+		    							<li><i class="fa fa-check"></i> <span>We help them increase their ability of critical thinking </span></li>
+		    							<li><i class="fa fa-check"></i> <span>We have answers for their hypothetical doubts</span></li>
+		    						</ul>
+		    					</div><!--feat-links end-->
+		    				</div>
+		    				<div class="col-lg-6">
+		    					<div class="provide-accordion toggle">
+									<div class="toggle-item cl1">
+										<h2 class="clr1"><i class="fa fa-child"></i> Learn with science</h2>
+										<div class="content">
+											<p style="color:black">Theory with visualization, develops a better understanding of the subject and promotes a scientific approach towards learning.  </p>
+										</div>
+									</div><!-- Toggle Item -->
+									<div class="toggle-item cl2">
+										<h2 class="clr2"><i class="fa fa-smile-o"></i>Play with science</h2>
+										<div class="content">
+											<p style="color:black">Learning science through playing makes students enthusiastic and improves their interest in the subject.</p>
+										</div>
+									</div><!-- Toggle Item -->
+									<div class="toggle-item cl3">
+										<h2 class="clr3"><i class="fa fa-book"></i>Explore with science</h2>
+										<div class="content">
+											<p style="color:black">Questions of "why and how" helps in developing the spirit of exploring science through analytical and logical thinking. </p>
+										</div>
+									</div><!-- Toggle Item -->
+								</div><!--toggle end-->
+		    				</div>
+		    			</div>
+	    			</div><!--acord-sec end-->
+	    			<div class="accord-text">
+	    				<h3>Your children’s education and wellfare are our main priorities</h3>
+	    			</div><!--accord-text end-->
+	    		</div><!--childy-sec end-->
+	    	</div>
+	    </section>
+
+ <section class="block2">
+	    	<div class="fixed-bg bg7 no-fix"></div>
+    		<div class="heading st2">
+    			<h3>Gallery</h3>
+    		</div><!--heading end-->
+    		<div class="masonary no-pd">
+    			<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12">
+						<div class="gallery-ms">
+							<img src="{% static "images/w1.jpeg" %}" alt="" style="width:500px;height:430px">
+							
+						</div><!--gallery-ms end-->
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12">
+						<div class="gallery-ms">
+							<img src="{% static "images/w10.jpeg" %}" alt="" style="width:500px;height:430px">
+						
+						</div><!--gallery-ms end-->
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12">
+						<div class="gallery-ms">
+							<img src="{% static "images/w9.jpg" %}" alt="" style="width:500px;height:430px">
+							
+						</div><!--gallery-ms end-->
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12">
+						<div class="gallery-ms">
+							<img src="{% static "images/w7.jpeg" %}" alt="" style="width:500px;height:430px">
+							
+						</div><!--gallery-ms end-->
+					</div>
+				</div>
+				<div class="full-gallery">
+					<a href="#" title="">CLICK HERE TO VIEW OUR FULL GALLERY</a>
+				</div><!--full-gallery end-->
+    		</div><!--gallery-section end-->
+	    </section>
+
+
+     <footer>
+	    	<div class="container">
+	    		<div class="footer-data">
+	    			<div class="row">
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-about">
+	    						<h3 class="widget-title">About Us</h3>
+	    						<p>We are an edutech company creating exciting products which enables kids to learn science concepts in an interesting way. Our products not only keep kids engaged but will also enable them to explore and create their own applications..</p>
+	    						
+	    					</div><!--widget-about end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Address</h3>
+	    						<ul>
+	    							<li><a href="#" title="">Cultiv8 Coworks,</a></li>
+	    							<li><a href="#" title="">Ganapathy,</a></li>
+	    							<li><a href="#" title="">Coimbatore - 641006</a></li>
+	    							
+	    						</ul>
+	    					</div><!--widget-links end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-posts">
+	    						<h3 class="widget-title">Contact us</h3>
+	    						<div class="blg-posts">
+	    							<div class="blg-post">
+	    								<i class="fas fa-phone" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">+91 6380327813</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								
+	    								<i class="far fa-envelope-open" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">info@brainixedutech.com</a></h3>
+
+	    								</div>
+	    							</div>
+	    							<div class="blg-post">
+	    								<i class="fas fa-globe" style="color:white;"></i>
+	    								<div class="blg-info">
+	    									<h3><a href="#" title="">www.brainixedutech.com</a></h3>
+	    									
+	    								</div>
+	    							</div>
+	    						</div><!--blg-posts end-->
+	    					</div><!--widget-posts end-->
+	    				</div>
+	    				<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	    					<div class="widget widget-links">
+	    						<h3 class="widget-title">Social media</h3>
+	    						<a href="https://www.facebook.com/brainixsolutions" class="fa fa-facebook"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+								<a href="https://twitter.com/BrainixS" class="fa fa-twitter"><i class="fab fa-twitter" style="color:white;"></i></a>
+								<a href="https://www.instagram.com/brainix_solutions/" class="fa fa-instagram"><i class="fab fa-instagram" style="color:white;"></i></a>
+								<a href="https://www.linkedin.com/in/brainix-solutions-6767551b3/" class="fa fa-linkedin"><i class="fab fa-linkedin-in" style="color:white;"></i></a>
+								<a href="https://www.youtube.com/channel/UCyODKPO2QWKFe76W421yl2Q" class="fa fa-youtube"><i class="fab fa-youtube" style="color:white;"></i></a>
+								
+	    						
+	    			</div><!--widget-about end-->
+	    				</div>
+	    				</div>
+	    			</div>
+	    		</div><!-- footer-data end-->
+	    	</div>
+	    </footer>
+
+	  <a class="scrollTop" href="#"><i class="fas fa-angle-double-up"></i></a>
+
+
+	</div><!--wrapper end-->
+
+
+<script src="https://kit.fontawesome.com/5b40725004.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/revolution.initialize.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 
+
+
+
+
+
+	    
